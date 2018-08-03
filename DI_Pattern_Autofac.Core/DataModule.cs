@@ -17,12 +17,7 @@ namespace DI_Pattern_Autofac.Core
         {
             this.connStr = connString;
         }
-
-        public Northwind_DBEntities()
-       : base("name=Northwind_DBEntities")
-        {
-        }
-
+ 
         protected override void Load(ContainerBuilder builder)
         {
             builder.Register(c => new EFContext(this.connStr)).As<IDbContext>().InstancePerRequest();
