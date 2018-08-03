@@ -1,0 +1,2 @@
+c:\users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Core\obj\Debug\DI_Pattern_Autofac.Core.csproj.CoreCompileInputs.cache
+c:\users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Core\obj\Debug\DI_Pattern_Autofac.Core.csprojAssemblyReference.cache

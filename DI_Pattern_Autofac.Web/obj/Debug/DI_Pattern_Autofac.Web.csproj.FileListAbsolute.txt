@@ -1,0 +1,8 @@
+c:\users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\bin\roslyn\System.IO.Compression.dll
+c:\users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\bin\roslyn\VBCSCompiler.exe
+c:\users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\obj\Debug\DI_Pattern_Autofac.Web.csprojAssemblyReference.cache
+c:\users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\obj\Debug\DI_Pattern_Autofac.Web.csproj.CoreCompileInputs.cache
