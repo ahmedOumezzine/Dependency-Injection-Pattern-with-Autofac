@@ -20,7 +20,17 @@ namespace DI_Pattern_Autofac.Web.Controllers
         public ActionResult Index()
         {
             var teams = repo.GetAll<Team>().ToList();
+ 
             return View(teams);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                repo.Dispose();
+            }
+            base.Dispose(disposing);
         }
 
         [HttpGet]

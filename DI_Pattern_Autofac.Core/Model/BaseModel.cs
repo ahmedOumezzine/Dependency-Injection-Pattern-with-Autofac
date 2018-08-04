@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DI_Pattern_Autofac.Core.Model
 {
+ 
     public abstract class BaseModel<T>
     {
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]

@@ -1,8 +1,25 @@
 ﻿using DI_Pattern_Autofac.Core.Model;
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace DI_Pattern_Autofac.Core.Interfaces
 {
-    public interface IRepository : IDisposable
+    public interface IRepository<TEntity> : IDisposable where TEntity : BaseEntity
+    {
+        Task<List<TEntity>> GetAllAsync();
+
+        Task<TEntity> GetByIdAsync(long id);
+
+        void Add(TEntity entity);
+
+        void Update(TEntity entity);
+
+        void Delete(TEntity entity);
+    }
+
+
+public interface IRepository : IDisposable
     {
         void Delete<TEntity>(TEntity entity) where TEntity : class;
         System.Linq.IQueryable<TEntity> GetAll<TEntity>() where TEntity : class;

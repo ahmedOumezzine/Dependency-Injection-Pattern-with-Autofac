@@ -24,9 +24,9 @@ namespace DI_Pattern_Autofac.Web.App_Start
             builder.RegisterModule(new DataModule(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=c:\users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\App_Data\Database1.mdf;Integrated Security=True"));
 
             var container = builder.Build();
-
-            // Set MVC DI resolver to use our Autofac container
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+
+           
         }
     }
 }

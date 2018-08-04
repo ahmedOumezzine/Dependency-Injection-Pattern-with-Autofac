@@ -1,24 +1,15 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using DI_Pattern_Autofac.Core.Interfaces;
-using DI_Pattern_Autofac.Core.Model;
-
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DI_Pattern_Autofac.Core.Repository
 {
-    public class TeamRepository : SqlRepository, ITeamRepository
+    public interface TeamRepository : IService<Product>
     {
-        public TeamRepository(IDbContext context)
-            : base(context)
-        {
+        Task<List<Product>> GetAllWithIncludeAsync();
 
-        }
-        public List<User> GetUsersInTeam(int teamId)
-        {
-            return (from u in this.GetAll<User>()
-                    where u.TeamId == teamId
-                    select u).ToList();
-        }
+        Task<List<Product>> GetBySupplierIdAsync(long supplierId);
     }
 }

@@ -20,12 +20,11 @@ namespace DI_Pattern_Autofac.Core
  
         protected override void Load(ContainerBuilder builder)
         {
-            builder.Register(c => new EFContext(this.connStr)).As<IDbContext>().InstancePerRequest();
+            builder.Register(c => new EFContext()).As<IDbContext>().InstancePerRequest();
             builder.RegisterType<EFContext>().InstancePerRequest();
 
-            builder.RegisterType<SqlRepository>().As<IRepository>().InstancePerRequest();
-            builder.RegisterType<TeamRepository>().As<ITeamRepository>().InstancePerRequest();
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
+           // builder.RegisterType<SqlRepository>().As<IRepository>().InstancePerRequest();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
 
             base.Load(builder);
         }
