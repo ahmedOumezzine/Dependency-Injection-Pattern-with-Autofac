@@ -10,7 +10,8 @@ namespace DI_Pattern_Autofac.Web.Controllers
 {
     public class TeamController : Controller
     {
-        private IUnitOfWork repo;
+        private readonly IUnitOfWork repo;
+
         public TeamController(IUnitOfWork repo)
         {
             this.repo = repo;
