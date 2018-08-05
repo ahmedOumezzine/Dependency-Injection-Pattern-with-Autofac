@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI_Pattern_Autofac.Web", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI_Pattern_Autofac.Core", "DI_Pattern_Autofac.Core\DI_Pattern_Autofac.Core.csproj", "{F68A1BD0-A47E-424E-ABB1-9BEC2EC5F4AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GRLibrary", "GRLibrary\GRLibrary.csproj", "{90DBE4B7-5A09-4898-B67B-799B1E5B9F62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F68A1BD0-A47E-424E-ABB1-9BEC2EC5F4AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F68A1BD0-A47E-424E-ABB1-9BEC2EC5F4AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F68A1BD0-A47E-424E-ABB1-9BEC2EC5F4AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90DBE4B7-5A09-4898-B67B-799B1E5B9F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90DBE4B7-5A09-4898-B67B-799B1E5B9F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90DBE4B7-5A09-4898-B67B-799B1E5B9F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90DBE4B7-5A09-4898-B67B-799B1E5B9F62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

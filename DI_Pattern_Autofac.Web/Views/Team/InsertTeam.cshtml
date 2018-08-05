@@ -1,4 +1,4 @@
-﻿@model DI_Pattern_Autofac.Core.Model.Team
+﻿@model GRLibrary.Team2
 
 @{
     ViewBag.Title = "InsertTeam";
@@ -10,30 +10,37 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
-        <h4>Team</h4>
-        <hr />
-        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+<div class="form-horizontal">
+    <h4>Team</h4>
+    <hr />
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
 
-        <div class="form-group">
-            <div class="col-md-offset-1">
-                @Html.LabelFor(t => t.Name)
-                @Html.EditorFor(t => t.Name)
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-1">
-                @Html.LabelFor(t => t.Description)
-                @Html.EditorFor(t => t.Description)
-            </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-1">
-                <input type="submit" value="Create" class="btn btn-sm" />
-            </div>
+    <div class="form-group">
+        <div class="col-md-offset-1">
+            @Html.LabelFor(t => t.Name)
+            @Html.EditorFor(t => t.Name)
         </div>
     </div>
+    <div class="form-group">
+        <div class="col-md-offset-1">
+            @Html.LabelFor(t => t.Username)
+            @Html.EditorFor(t => t.Username)
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-1">
+            @Html.LabelFor(t => t.Description)
+            @Html.EditorFor(t => t.Description)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-1">
+            <input type="submit" value="Create" class="btn btn-sm" />
+        </div>
+    </div>
+</div>
 }
 
 <div>

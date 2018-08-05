@@ -1,5 +1,5 @@
-﻿using DI_Pattern_Autofac.Core.Interfaces;
-using DI_Pattern_Autofac.Core.Model;
+﻿
+using GRLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +10,8 @@ namespace DI_Pattern_Autofac.Web.Controllers
 {
     public class TeamController : Controller
     {
-        private IRepository repo;
-        public TeamController(IRepository repo)
+        private IUnitOfWork repo;
+        public TeamController(IUnitOfWork repo)
         {
             this.repo = repo;
         }
@@ -19,20 +19,12 @@ namespace DI_Pattern_Autofac.Web.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var teams = repo.GetAll<Team>().ToList();
+            var teams = repo.Repository<Team2>().GetAll().ToList();
  
             return View(teams);
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                repo.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
+     
         [HttpGet]
         public ActionResult InsertTeam()
         {
@@ -46,11 +38,11 @@ namespace DI_Pattern_Autofac.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult InsertTeam(Team team)
+        public ActionResult InsertTeam(Team2 team)
         {
             if (ModelState.IsValid)
             {
-                repo.Insert<Team>(team);
+                repo.Repository<Team2>().Add(team);
                 repo.SaveChanges();
                 return RedirectToAction("Index");
             }

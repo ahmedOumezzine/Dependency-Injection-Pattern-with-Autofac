@@ -1,5 +1,4 @@
-﻿using DI_Pattern_Autofac.Core.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,7 +8,6 @@ namespace DI_Pattern_Autofac.Web.BasePages
 {
     public class CustomBasePage : WebViewPage
     {
-        public IRepository repo { get; set; }
 
         public override void Execute() { }
     }
