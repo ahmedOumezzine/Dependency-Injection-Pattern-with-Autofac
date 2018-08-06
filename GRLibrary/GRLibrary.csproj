@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="ContextFactory\IDbContextFactory.cs" />
     <Compile Include="Repository\GenericRepository.cs" />
+    <Compile Include="Repository\TeamRepository.cs" />
+    <Compile Include="Repository\ITeamRepository.cs" />
     <Compile Include="Repository\IGenericRepository.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

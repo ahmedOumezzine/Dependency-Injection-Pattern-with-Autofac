@@ -22,10 +22,13 @@ namespace GRLibrary
         }
 
 
-        public Repository.TeamRepository<Team2> TeamRepository
-        {
-            get { return _modelRepository ?? (_modelRepository = new GenericRepository<Model>(_context)); }
-        }
+        private readonly TeamRepository<Team2> _TeamRepository = null;
+
+
+        //public TeamRepository<Team2> TeamRepository
+        //{
+        //    get { return _TeamRepository ?? (_TeamRepository = new TeamRepository<Team2>(dbContext)); }
+        //}
 
         public Dictionary<Type, object> repositories = new Dictionary<Type, object>();
 
