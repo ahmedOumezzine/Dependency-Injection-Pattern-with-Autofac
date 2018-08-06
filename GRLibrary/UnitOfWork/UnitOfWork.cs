@@ -22,6 +22,11 @@ namespace GRLibrary
         }
 
 
+        public Repository.TeamRepository<Team2> TeamRepository
+        {
+            get { return _modelRepository ?? (_modelRepository = new GenericRepository<Model>(_context)); }
+        }
+
         public Dictionary<Type, object> repositories = new Dictionary<Type, object>();
 
         public IGenericRepository<T> Repository<T>() where T : class
@@ -35,6 +40,7 @@ namespace GRLibrary
             return repo;
         }
 
+ 
         public void SaveChanges()
         {
             dbContext.SaveChanges();

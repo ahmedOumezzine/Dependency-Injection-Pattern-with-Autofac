@@ -28,6 +28,28 @@ namespace GRLibrary
 
             return entities.Set<T>();
         }
+        public  List<T> GetAll(Expression<Func<T, bool>> filter = null,Func<IQueryable<T>, IOrderedEnumerable<T>> orderBy = null,string includeProperties = "")
+        {
+            IQueryable<T> query = entities.Set<T>();
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            foreach (string includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeProperty);
+            }
+
+            if (orderBy != null)
+            {
+                return orderBy(query).ToList();
+            }
+
+            return query.ToList();
+        }
+
 
         public T Get(Expression<Func<T, bool>> predicate)
         {
@@ -62,6 +84,15 @@ namespace GRLibrary
         public T Find(object id)
         {
             return entities.Set<T>().Find(id);
+        }
+        public T FindBy(Expression<Func<T, bool>> predicate, string includeProperties = "")
+        {
+            IQueryable<T> query = entities.Set<T>();
+            foreach (string includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeProperty);
+            }
+            return query.Where(predicate).FirstOrDefault();
         }
 
         public Object SQL(String sqlquery)
