@@ -17,5 +17,7 @@ namespace GRLibrary
         void Edit(T entity);
         void Save();
         void Attach(T entity);
+        Object SQL(String sqlquery);
+        int Count(String ProductsTableName);
     }
 }

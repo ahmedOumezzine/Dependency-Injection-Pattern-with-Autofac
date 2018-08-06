@@ -21,15 +21,9 @@ namespace DI_Pattern_Autofac.Web.App_Start
             builder.RegisterSource(new ViewRegistrationSource());
 
 
-            // Register our Data dependencies
-            //builder.RegisterModule(new DataModule(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=c:\users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\App_Data\Database1.mdf;Integrated Security=True"));
-            //  builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().SingleInstance();
-
-#pragma warning disable CS0618 // Type or member is obsolete
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>()
            .WithParameter("dbContextFactory", new DbContextFactory())
            .InstancePerRequest();
-#pragma warning restore CS0618 // Type or member is obsolete
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

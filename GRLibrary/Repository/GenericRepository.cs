@@ -63,5 +63,17 @@ namespace GRLibrary
         {
             return entities.Set<T>().Find(id);
         }
+
+        public Object SQL(String sqlquery)
+        {
+            return entities.Set<T>().SqlQuery(sqlquery);
+        }
+
+        public int Count(String ProductsTableName)
+        {
+            StringBuilder finalquery = new StringBuilder();
+            finalquery.AppendFormat("SELECT count(*) FROM {0} ", ProductsTableName);
+            return entities.Database.SqlQuery<int>(finalquery.ToString()).SingleOrDefault();
+        }
     }
 }
