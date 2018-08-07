@@ -28,3 +28,6 @@ C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Core\obj\Debug
 C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Core\obj\Debug\DI_Pattern_Autofac.Core.dll
 C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Core\obj\Debug\DI_Pattern_Autofac.Core.pdb
 C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Core\obj\Debug\DI_Pattern_Autofac.Core.csprojAssemblyReference.cache
+C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Core\bin\Debug\GRLibrary.dll
+C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Core\bin\Debug\GRLibrary.pdb
+C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Core\bin\Debug\GRLibrary.dll.config
