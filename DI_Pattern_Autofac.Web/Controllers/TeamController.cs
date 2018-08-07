@@ -1,11 +1,6 @@
-﻿
-using DI_Pattern_Autofac.Core.Model;
+﻿using DI_Pattern_Autofac.Core.Model;
 using DI_Pattern_Autofac.Core.Repository;
 using GRLibrary;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace DI_Pattern_Autofac.Web.Controllers
@@ -22,12 +17,11 @@ namespace DI_Pattern_Autofac.Web.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-           // var teams = repo.Repository<Team2>().GetAll().ToList();
+            // var teams = repo.Repository<Team2>().GetAll().ToList();
             repo.GetNonGenericRepository<Team2, TeamRepository>().GetAll();
             return View();
         }
 
-     
         [HttpGet]
         public ActionResult InsertTeam()
         {

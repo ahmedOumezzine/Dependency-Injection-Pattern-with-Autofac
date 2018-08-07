@@ -5,14 +5,12 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DI_Pattern_Autofac.Core.Repository
 {
-    public class TeamRepository : IGenericRepository<Team2> , ITeamRepository
+    public class TeamRepository : IGenericRepository<Team2>, ITeamRepository
     {
-        public TeamRepository(DbContext _entities) 
+        public TeamRepository(DbContext _entities)
         {
         }
 

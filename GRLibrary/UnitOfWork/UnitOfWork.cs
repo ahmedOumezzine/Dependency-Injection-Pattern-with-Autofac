@@ -3,14 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GRLibrary
 {
     public class UnitOfWork : IUnitOfWork
     {
         private DbContext dbContext;
+
         /// <summary>
         /// NOTE: repository getters instantiate repositories as needed (lazily)...
         ///       i wish I knew of IoC "way" of wiring up repository getters...
@@ -60,7 +59,7 @@ namespace GRLibrary
             {
                 if (disposing)
                 {
-                  ///  dbContext.Dispose();
+                    ///  dbContext.Dispose();
                 }
             }
             this.disposed = true;

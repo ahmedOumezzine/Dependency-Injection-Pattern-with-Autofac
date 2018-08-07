@@ -1,10 +1,6 @@
-﻿using GRLibrary;
+﻿using DI_Pattern_Autofac.Core.Model;
 using GRLibrary.ContextFactory;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
 
 namespace DI_Pattern_Autofac.Web.App_Start
 {
@@ -17,12 +13,11 @@ namespace DI_Pattern_Autofac.Web.App_Start
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
         }
 
         public virtual DbSet<Team2> TeamSet { get; set; }
-
     }
+
     public class DbContextFactory : IDbContextFactory
     {
         private readonly DbContext _context;

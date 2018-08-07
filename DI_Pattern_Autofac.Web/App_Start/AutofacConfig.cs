@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
-using System.Web.Mvc;
 using GRLibrary;
+using System.Web.Mvc;
 
 namespace DI_Pattern_Autofac.Web.App_Start
 {
@@ -20,15 +20,12 @@ namespace DI_Pattern_Autofac.Web.App_Start
             // Register dependencies in custom views
             builder.RegisterSource(new ViewRegistrationSource());
 
-
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>()
            .WithParameter("dbContextFactory", new DbContextFactory())
            .InstancePerRequest();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
-
-           
         }
     }
 }
