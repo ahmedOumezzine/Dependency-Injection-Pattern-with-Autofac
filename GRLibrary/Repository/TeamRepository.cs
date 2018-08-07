@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GRLibrary
 {
-    public class TeamRepository<team2> : IGenericRepository<Team2> ,ITeamRepository
+    public class TeamRepository : IGenericRepository<Team2> ,ITeamRepository
     {
         public TeamRepository(DbContext _entities) 
         {

@@ -21,7 +21,8 @@ namespace DI_Pattern_Autofac.Web.Controllers
         public ActionResult Index()
         {
             var teams = repo.Repository<Team2>().GetAll().ToList();
- 
+            repo.GetNonGenericRepository<Team2, TeamRepository>().GetAll();
+
             return View(teams);
         }
 

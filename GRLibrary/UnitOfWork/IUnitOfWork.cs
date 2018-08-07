@@ -10,6 +10,7 @@ namespace GRLibrary
     {
 
         IGenericRepository<T> Repository<T>() where T : class;
+        IGenericRepository<TEntity> GetNonGenericRepository<TEntity, TRepository>() where TEntity : class;
         void SaveChanges();
     }
 }

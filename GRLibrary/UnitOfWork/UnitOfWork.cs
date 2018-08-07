@@ -21,15 +21,6 @@ namespace GRLibrary
             dbContext = dbContextFactory.GetDbContext();
         }
 
-
-        private readonly TeamRepository<Team2> _TeamRepository = null;
-
-
-        //public TeamRepository<Team2> TeamRepository
-        //{
-        //    get { return _TeamRepository ?? (_TeamRepository = new TeamRepository<Team2>(dbContext)); }
-        //}
-
         public Dictionary<Type, object> repositories = new Dictionary<Type, object>();
 
         public IGenericRepository<T> Repository<T>() where T : class
@@ -43,7 +34,19 @@ namespace GRLibrary
             return repo;
         }
 
- 
+        public IGenericRepository<TEntity> GetNonGenericRepository<TEntity, TRepository>() where TEntity : class
+        {
+            if (this.repositories.Keys.Contains(typeof(TRepository)))
+            {
+                return this.repositories[typeof(TRepository)] as IGenericRepository<TEntity>;
+            }
+            var repoType = typeof(TRepository);
+            var constructorInfo = repoType.GetConstructor(new Type[] { typeof(DbContext) });
+            IGenericRepository<TEntity> repository = (IGenericRepository<TEntity>)constructorInfo.Invoke(new object[] { this.dbContext });
+            this.repositories.Add(typeof(TRepository), repository);
+            return repository;
+        }
+
         public void SaveChanges()
         {
             dbContext.SaveChanges();
