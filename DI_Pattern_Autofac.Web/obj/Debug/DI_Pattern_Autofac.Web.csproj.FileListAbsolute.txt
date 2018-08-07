@@ -101,3 +101,6 @@ C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\bin\Antlr3
 C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\obj\Debug\DI_Pattern_Autofac.Web.csproj.CopyComplete
 C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\obj\Debug\DI_Pattern_Autofac.Web.dll
 C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\obj\Debug\DI_Pattern_Autofac.Web.pdb
+C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\bin\DI_Pattern_Autofac.Core.dll
+C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\bin\DI_Pattern_Autofac.Core.pdb
+C:\Users\ahmed\source\repos\DI_Pattern_Autofac\DI_Pattern_Autofac.Web\bin\DI_Pattern_Autofac.Core.dll.config
